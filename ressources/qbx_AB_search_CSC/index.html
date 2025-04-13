@@ -1,0 +1,98 @@
+<!-- RECHERCHE DE DOC -->
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carton Interaction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            background: #2a1f00;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+        input {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            background: #555;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Entrez une date :</h1>
+        <input type="date" id="dateInput">
+        <button onclick="submitDate()">Valider</button>
+        <button onclick="closeInterface()">Fermer</button>
+    </div>
+    <script>
+        // Gestion des messages envoyés par le client Lua
+        window.addEventListener('message', function(event) {
+
+            if (event.data.actiondate === 'opendate') {
+                document.body.style.display = 'flex'; // Affiche le body
+                document.getElementById('container').style.display = 'block';
+            } 
+        });
+
+        // Gestion de la soumission de la date
+        function submitDate() {
+            const dateInput = document.getElementById("dateInput").value;
+
+            if (!dateInput) {
+                // Si aucune date n'est saisie, fermer l'interface
+                closeInterface();
+                return;
+            }
+
+            // Envoyer la date au script client via fetch
+            fetch(`https://${GetParentResourceName()}/submitDate`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ date: dateInput })
+            });
+
+            // Fermer l'interface après soumission
+            closeInterface();
+        }
+
+        // Fermeture de l'interface
+        function closeInterface() {
+            // Fermer l'interface visuellement
+            document.body.style.display = "none";
+            document.getElementById('container').style.display = 'none';
+
+            // Envoyer un callback "close" au script client
+            fetch(`https://${GetParentResourceName()}/closedate`, {
+                method: "POST"
+            });
+        }
+    </script>
+</body>
+</html>

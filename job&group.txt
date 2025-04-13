@@ -1,0 +1,116 @@
+gang à ajouter dans: qbx_core/shared/gangs.lua :
+
+    ['tueur'] = {
+        label = 'Special Role',
+        grades = {
+            [0] = {
+                name = 'Special Role'
+            },
+        },
+    },
+
+jobs à ajouter dans: qbx_core/shared/jobss.lua :
+
+-- OPEN SPACE
+
+    ['menage'] = {
+		label = 'Menage',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Exécutant.e Sanitaires',
+                payment = 0
+            },
+        },
+	},
+
+    ['compta'] = {
+		label = 'Compta',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Conservateur.ice budgétaires',
+                payment = 0
+            },
+        },
+	},
+
+    ['accueil'] = {
+		label = 'Accueil',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Coordinateur.rice Fonctionnel',
+                payment = 0
+            },
+        },
+	},	
+    ['archive'] = {
+		label = 'Archive',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Garant.e de consignations et dépôts',
+                payment = 0
+            },
+        },
+	},
+    ['cafet'] = {
+		label = 'Cafeteria',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Artisant.e Culinaires',
+                payment = 0
+            },
+        },
+	},
+    ['it'] = {
+		label = 'IT',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Chargé.e de télégestion',
+                payment = 0
+            },
+        },
+	},
+    ['communication'] = {
+		label = 'Communication',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Auxiliaire transmitionnel',
+                payment = 0
+            },
+        },
+	},
+    ['infirmerie'] = {
+		label = 'Infirmerie',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Agent.e thérapeutique',
+                payment = 0
+            },
+        },
+	},
+    ['admin'] = {
+		label = 'Admin',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Superviseur',
+                payment = 0
+            },
+        },
+	},

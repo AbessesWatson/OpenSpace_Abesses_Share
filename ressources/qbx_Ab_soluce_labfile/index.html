@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        #container {
+            background-color: #f5f5dc; /* Fond beige */
+            border: 3px solid #d2b48c; /* Contour sombre */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+            text-align: center;
+            padding: 20px; /* Ajoute de l'espace autour du contenu */
+        }
+
+        h1 {
+            font-size: 24px; /* Taille du texte principal */
+            color: #2a1f00; /* Couleur marron */
+            margin: 0 0 20px 0; /* Marge sous le texte pour espacer */
+        }
+
+        img {
+            display: block; /* Centre l'image horizontalement */
+            margin: 0 auto 20px auto; /* Ajoute une marge sous l'image */
+            width: 64px;
+            height: 64px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ccffff; /* Fond du bouton */
+            border: none; /* Supprime le contour du bouton */
+            border-radius: 5px; /* Arrondi les coins */
+            color: #2a1f00; /* Couleur du texte du bouton */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre subtile pour le bouton */
+            transition: background-color 0.3s; /* Animation au survol */
+        }
+
+        button:hover {
+            background-color: #a6caf0; /* Couleur du bouton au survol */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="text"></h1>
+        <img id="dynamicImage" src="" alt="Image associée" style="width: 64px; height: 64px; margin-top: 10px;">
+        <button onclick="exit()">Fermer</button>
+    </div>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data.type === "ui") {
+                document.body.style.display = event.data.status ? "flex" : "none";
+                document.getElementById("text").innerText = event.data.message || "";
+                document.getElementById("dynamicImage").src = event.data.image || ""; // Change l'image
+            }
+        });
+
+        function exit() {
+            fetch(`https://${GetParentResourceName()}/exit`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json; charset=UTF-8",
+                },
+                body: JSON.stringify({})
+            }).then(resp => resp.json()).then(resp => console.log(resp));
+        }
+    </script>
+</body>
+</html>

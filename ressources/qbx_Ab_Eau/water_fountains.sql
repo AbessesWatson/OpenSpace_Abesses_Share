@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS water_fountains (
+    id VARCHAR(50) PRIMARY KEY,
+    WaterLvl INT NOT NULL DEFAULT '10'
+);

@@ -1,0 +1,193 @@
+Les TPs des ascenseurs sont dans le script office_elevator fait pas Proky. A voir avec lui pour y avoir accès ou il faut faire soit même les tp. Il est possible d'utiliser le système de tp de QB (pas QBX) pour faire un tp avec plusieurs direction.
+
+Pour les autres TPs, ajouter dans qbx_smallresources/qbx_teleports/config.json:
+
+[
+            {
+                "_name": "Escalier_espace_de_vie",
+                "coords": [83.74, 77.5, -19.00, 264.78], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [7.57, -7.64, 213.4, 85.82],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'espace de vie"
+            }
+        ],
+        [
+            {
+                "_name": "Bureau",
+                "coords": [-14.4, 184.7, -19.0, 269.0], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [9.45, 0.6, 210.0, 90.0], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder aux Bureaux"
+            }
+        ], 
+        [
+            {
+                "_name": "Cubbicles",
+                "coords": [-19.53, 85.46, -19.0, 263.13],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [3.27, 0.66, 206.6, 87.1], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder aux Cubbicles"
+            }
+        ], 
+        [
+            {
+                "_name": "archive1",
+                "coords": [98.07, 5.81, -19.00, 270.17],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [16.30, 21.04, 216.80, 89.73],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder aux archives"
+            }
+        ],
+        [
+            {
+                "_name": "archive2",
+                "coords": [71.45, -8.21, -15.40, 177.85],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [-6.73, 7.37, 220.20, 85.93],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder aux archives"
+            }
+        ],
+        [
+            {
+                "_name": "CEO",
+                "coords": [55.55, -9.8, 238.65, 88.85],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [-0.16, 3.79, 223.70, 87.62],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'étage du CEO"
+            }
+        ],
+        [
+            {
+                "_name": "RDC_escalier", 
+                "coords": [-10.54, -9.39, -19.0, 268.11],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [9.69, -3.65, 203.2, 91.68], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à la récéption"
+            }
+        ],
+        [
+            {
+                "_name": "RDC_sous_sol",
+                "coords": [-6.17, -10.45, -19.0, 2.33], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au sous-sol"
+            },
+            {
+                "coords": [-100.64, 40.20, -19.00, 93.93],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à la récéption" 
+            }
+        ],
+        [
+            {
+                "_name": "parking",
+                "coords": [-129.29, 34.67, -22.60, 357.66], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au Parking"
+            },
+            {
+                "coords": [134.68, -692.06, 33.42, 248.68], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au sous-sol" 
+            }
+        ],
+
+        [
+            {
+                "_name": "studio",
+                "coords": [-1021.71, -91.8, -99.4, 354.87], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au Parking"
+            },
+            {
+                "coords": [78.98, -739.89, 33.13, 249.42], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au Studio" 
+            }
+        ],
+
+        
+        [
+            {
+                "_name": "tueur1",
+                "coords": [-97.51, 58.86, -22.66, 90.0], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à la sécurité"
+            },
+            {
+                
+                "coords": [-2.19, -11.91, -23.00, 191.25],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au Sous-sol"
+            }
+        ],
+        
+        [
+            {
+                "_name": "tueur2",
+                "coords": [-27.78, 183.11, -23.13, 270.0], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à l'escalier"
+            },
+            {
+                "coords": [-2.46, 5.50, 215.17, 180.0],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder aux ventilations" 
+            }
+        ],
+        
+        [
+            {
+                "_name": "tueur3",
+                "coords": [15.34, 180.69, -23.13, 180.0], 
+                "allowVehicle": false,
+                "drawText": "[E] Accèder à la sécurité des cubicles"
+            },
+            {
+                "coords": [14.57, 76.29, -19.0, 1.28],
+                "allowVehicle": false,
+                "drawText": "[E] Accèder au conduit des bureaux"
+            }
+        ],
+        
+        [
+            {
+                "_name": "backroom",
+                "coords": [101.14, -60.32, -22.96, 180.0], 
+                "allowVehicle": false,
+                "drawText": "[E] POUR CONTINUER"
+            },
+            {
+                "coords": [540.0, 928.0, 6.0, 173.1],
+                "allowVehicle": false,
+                "drawText": "[E] POUR RETOURNER"
+            }
+        ]

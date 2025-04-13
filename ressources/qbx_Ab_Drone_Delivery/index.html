@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Delivery</title>
+    <style>
+        body {
+            display: none; /* Caché par défaut */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #2a1f00;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        select, input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body id="container" style="display: none;"> <!-- Par défaut caché -->
+    <div class="container">
+        <h2>Livraison par Drone</h2>
+        <label for="item">Choisir un objet :</label>
+        <select id="item">
+            <option value="" disabled selected>Sélectionner un objet</option>
+        </select>
+        <label for="count">Quantité (max 8) :</label>
+        <input type="number" id="count" min="1" max="8" placeholder="1" style="width: 50px; text-align: center;">
+        <button onclick="submitData()">Commander</button>
+        <button onclick="closeInterface()">Annuler</button>
+    </div>
+
+    <script>
+        // Gestion des messages reçus par l'interface
+        window.addEventListener("message", function (event) {
+            const { action, items } = event.data;
+
+            if (action === "openDeliveryInterface") {
+                // Afficher l'interface
+                document.body.style.display = "flex"; // Change display: none en flex
+
+                // Réinitialiser et remplir la liste d'objets
+                const itemSelect = document.getElementById("item");
+                itemSelect.innerHTML = ""; // Réinitialise le menu
+                items.forEach(item => {
+                    const option = document.createElement("option");
+                    option.value = item.name;
+                    option.textContent = item.label;
+                    itemSelect.appendChild(option);
+                });
+            } else if (action === "hideDeliveryInterface") {
+                // Cacher l'interface
+                document.body.style.display = "none";
+            }
+        });
+
+        // Soumission des données
+        function submitData() {
+            const itemName = document.getElementById("item").value;
+            const itemCount = document.getElementById("count").value;
+
+            if (!itemName || itemCount < 1 || itemCount > 8) {
+                // Si les données sont invalides, fermer l'interface
+                document.body.style.display = "none";
+
+                // Optionnel : Vous pouvez envoyer une notification au client via fetch si nécessaire
+                fetch(`https://${GetParentResourceName()}/close`, {
+                    method: "POST"
+                });
+                return;
+            }
+
+            // Envoyer les données au script client via fetch
+            fetch(`https://${GetParentResourceName()}/submitData`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name: itemName, count: itemCount })
+            });
+
+            // Fermer l'interface après soumission
+            document.body.style.display = "none";
+        }
+
+        // Fermeture de l'interface avec le bouton Annuler
+        function closeInterface() {
+            // Fermer l'interface visuellement
+            document.body.style.display = "none";
+
+            // Envoyer un callback "close" au script client
+            fetch(`https://${GetParentResourceName()}/close`, {
+                method: "POST"
+            });
+        }
+
+    </script>
+</body>
+</html>

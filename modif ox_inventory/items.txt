@@ -1,0 +1,4254 @@
+pour ajouter les images d'inventaire des items il faut copié le contenu du dossier "miniatures items" dans ox_inventory/web/images
+
+items à ajouter dans: ox_inventory/data/items.lua :
+
+-- OS OBJET /////////////////////////
+
+-- boisson
+
+    ["chococho"] = {
+        label = "Chococho",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Un bon chocolat chaud pour évacuer le stress",
+        client = {
+            image = "Chococho.png",
+            export = 'qbx_Ab_Consomable.chococho'
+        }
+        
+    },
+    ["namas_tea"] = {
+        label = "Namas tea",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Du thé new age",
+        client = {
+            image = "Namas_tea.png",
+            export = 'qbx_Ab_Consomable.namas_tea'
+        }
+        
+    },
+    ["ginseng_tea"] = {
+        label = "Thé de Ginseng",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Délicieux thé artisanal coréen",
+        client = {
+            image = "ginseng_tea.png",
+            export = 'qbx_Ab_Consomable.ginseng_tea'
+        }
+        
+    },
+    ["powcoffee"] = {
+        label = "Power Coffee",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Du café pour faire le plein d'énérgie",
+        client = {
+            image = "Powcoffee.png",
+            export = 'qbx_Ab_Consomable.powcoffee'
+        }
+        
+    },
+    ["cocola"] = {
+        label = "Cocola",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Un soda pour faire le plein d'énérgie",
+        client = {
+            image = "Cocola.png",
+            export = 'qbx_Ab_Consomable.cocola'
+        }
+        
+    },
+    ["sprout"] = {
+        label = "Sprout",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Un soda pour le calme",
+        client = {
+            image = "Sprout.png",
+            export = 'qbx_Ab_Consomable.sprout'
+        }
+        
+    },
+    ["jumbo"] = {
+        label = "Jumbo",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Un soda dont on a besoin dans l'immédiat",
+        client = {
+            image = "Jumbo.png",
+            export = 'qbx_Ab_Consomable.jumbo'
+        }
+        
+    },
+
+-- nourriture
+
+    ["roar"] = {
+        label = "Roar",
+        weight = 300,
+        stack = true,
+        close = true,
+        description = "Une délicieuse bar chocolaté energisante",
+        client = {
+            image = "Roar.png",
+            export = 'qbx_Ab_Consomable.roar'
+        }
+        
+    },
+
+    ["bellevillewood"] = {
+        label = "BellevilleWood",
+        weight = 300,
+        stack = true,
+        close = true,
+        description = "Des chewing-gums relaxant",
+        client = {
+            image = "BellevilleWood.png",
+            export = 'qbx_Ab_Consomable.bellevillewood'
+        }
+        
+    },
+
+    ["swacks"] = {
+        label = "Swacks",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Des céreales de qualité prestige",
+        client = {
+            image = "Swacks.png",
+            export = 'qbx_Ab_Consomable.swacks'
+        }
+        
+    },
+
+
+-- eau et café
+    ["bonbonne"] = {
+        label = "Bonbonne",
+        weight = 15000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Une lourde bonbonne d'eau pour remplir les fontaine à eau.",
+        client = {
+            image = "Bonbonne.png",
+            export = 'qbx_Ab_Eau.bonbonne'
+        }
+        
+    },
+    ["cafepack"] = {
+        label = "Pack de café",
+        weight = 10000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un lourd pack de café pour remplir les machines.",
+        client = {
+            image = "cafepack.png",
+            export = 'qbx_Ab_CafeMachines.cafepack'
+        }
+        
+    },
+    ["cafesac"] = {
+        label = "Sac de café",
+        weight = 5000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un gros sac de café qu'il faut moudre.",
+        client = {
+            image = "cafesac.png",
+            export = 'qbx_Ab_CafeMachines.cafepack'
+        }
+        
+    },
+    ["goblet"] = {
+        label = "Goblet vide",
+        weight = 200,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un goblet en carton vide",
+        client = {
+            image = "Gobelet_vide.png",
+            export = 'qbx_Ab_Eau.goblet'
+        }
+        
+    },
+
+-- cafet craft
+
+    ["huile_alimentaire"] = {
+        label = "La zhuile",
+        weight = 2500,
+        stack = false,
+        close = false,
+        description = "Une grosse bouteille de zhuile alimentaire",
+        client = {
+            image = "huile_alimentaire.png",
+            export = 'qbx_Ab_CafetCraft.huile_alimentaire'
+        }
+        
+    },
+    ["cafe_moulu"] = {
+        label = "Café moulu",
+        weight = 100,
+        stack = true,
+        close = false,
+        description = "Du café moulu",
+        client = {
+            image = "Sachet_Cafe.png",
+            export = 'qbx_Ab_CafetCraft.cafe_moulu'
+        }
+        
+    },
+    ["sachet_the"] = {
+        label = "Sachet de thé",
+        weight = 100,
+        stack = true,
+        close = false,
+        description = "Un sachet de thé",
+        client = {
+            image = "Sachet_The.png",
+            export = 'qbx_Ab_CafetCraft.sachet_the'
+        }
+        
+    },
+    ["chocolat_poudre"] = {
+        label = "Chocolat en poudre",
+        weight = 100,
+        stack = true,
+        close = false,
+        description = "Du chocolat en poudre",
+        client = {
+            image = "Sachet_Choco.png",
+            export = 'qbx_Ab_CafetCraft.chocolat_poudre'
+        }
+        
+    },
+    ["eau_bouillante"] = {
+        label = "Eau bouillante",
+        weight = 400,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une casserole d'eau bouillante",
+        client = {
+            image = "Casserole_hot.png",
+            export = 'qbx_Ab_CafetCraft.eau_bouillante'
+        }
+        
+    },
+    ["eau_casserole"] = {
+        label = "Casserole d'eau",
+        weight = 400,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une casserole d'eau",
+        client = {
+            image = "Casserole_cold.png",
+            export = 'qbx_Ab_CafetCraft.eau_casserole'
+        }
+        
+    },
+    ["salade"] = {
+        label = "Salade",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Une Salade complète",
+        client = {
+            image = "salade.png",
+            export = 'qbx_Ab_Consomable.salade'
+        }
+        
+    },
+    ["feuille_salade"] = {
+        label = "Feuille de salade",
+        weight = 100,
+        stack = true,
+        close = true,
+        description = "Une feuille de salade ",
+        client = {
+            image = "feuille_salade.png",
+            export = 'qbx_Ab_Consomable.feuille_salade'
+        }
+        
+    },
+    ["tomate"] = {
+        label = "Tomate",
+        weight = 250,
+        stack = true,
+        close = true,
+        description = "Une tomate",
+        client = {
+            image = "tomate.png",
+            export = 'qbx_Ab_Consomable.tomate'
+        }
+        
+    },
+    ["tomate_decoupe"] = {
+        label = "Tomate découpé",
+        weight = 100,
+        stack = true,
+        close = true,
+        description = "Une tomate découpé",
+        client = {
+            image = "tomate_decoupe.png",
+            export = 'qbx_Ab_Consomable.tomate_decoupe'
+        }
+        
+    },
+    ["oeuf"] = {
+        label = "Oeufs",
+        weight = 400,
+        stack = true,
+        close = false,
+        description = "Des oeufs de poule",
+        client = {
+            image = "oeuf.png",
+            export = 'qbx_Ab_CafetCraft.oeuf'
+        }
+        
+    },
+    ["oeuf_battu"] = {
+        label = "Oeuf battus",
+        weight = 100,
+        stack = true,
+        close = false,
+        description = "Un Oeuf dont le jaune et le blanc a été mélangé",
+        client = {
+            image = "oeuf_battu.png",
+            export = 'qbx_Ab_CafetCraft.oeuf_battu'
+        }
+        
+    },
+    ["steakcru"] = {
+        label = "Steak haché cru",
+        weight = 500,
+        stack = true,
+        close = false,
+        description = "Un steak haché cru",
+        client = {
+            image = "steakcru.png",
+            export = 'qbx_Ab_CafetCraft.steakcru'
+        }
+        
+    },
+    ["steakcuit"] = {
+        label = "Steak haché cuit",
+        weight = 400,
+        stack = true,
+        close = true,
+        description = "Un steak haché cuit",
+        client = {
+            image = "steakcuit.png",
+            export = 'qbx_Ab_Consomable.steakcuit'
+        }
+        
+    },
+    ["patate"] = {
+        label = "Pomme de terre",
+        weight = 2200,
+        stack = true,
+        close = false,
+        description = "Une pomme de terre",
+        client = {
+            image = "patate.png",
+            export = 'qbx_Ab_Consomable.patate'
+        }
+        
+    },
+    ["patate_decoupe"] = {
+        label = "Pomme de terre découpé",
+        weight = 2000,
+        stack = true,
+        close = false,
+        description = "Une pomme de terre découpé",
+        client = {
+            image = "patate_decoupe.png",
+            export = 'qbx_Ab_Consomable.patate_decoupe'
+        }
+        
+    },
+    ["pain"] = {
+        label = "Pain à hamburger",
+        weight = 200,
+        stack = true,
+        close = true,
+        description = "Un pain à hamburger",
+        client = {
+            image = "pain.png",
+            export = 'qbx_Ab_Consomable.pain'
+        }
+        
+    },
+    ["pizza_surgelee"] = {
+        label = "Pizza surgelée",
+        weight = 400,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une pizza surgelé.",
+        client = {
+            image = "pizza_surgelee.png",
+            export = 'qbx_Ab_Consomable.pizza_surgelee'
+        }     
+    },
+
+
+-- Cafet Craft Consommable
+
+    ["hamburger"] = {
+        label = "Hamburger",
+        weight = 700,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un Hamburger. Il faut être à table pour manger.",
+        client = {
+            image = "hamburger.png",
+            export = 'qbx_Ab_Consomable.hamburger'
+        }
+        
+    },
+    ["omelette"] = {
+        label = "Omelette",
+        weight = 150,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une omelette. Il faut être à table pour manger.",
+        client = {
+            image = "omelette.png",
+            export = 'qbx_Ab_Consomable.omelette'
+        }
+        
+    },
+    ["salade_tomate"] = {
+        label = "Salade de tomate",
+        weight = 450,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une salade avec de la tomate dedans. Il faut être à table pour manger.",
+        client = {
+            image = "salade_tomate.png",
+            export = 'qbx_Ab_Consomable.salade_tomate'
+        }
+        
+    },
+
+    ["frite"] = {
+        label = "Frites",
+        weight = 200,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Des frites.",
+        client = {
+            image = "frite.png",
+            export = 'qbx_Ab_Consomable.frite'
+        }
+        
+    },
+
+    ["frite_carton"] = {
+        label = "Carton de frites",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Le carton qui servait de récipient à frites",
+        client = {
+            image = "frite_carton.png",
+            export = 'qbx_Ab_Consomable.frite_carton'
+        }    
+    },
+
+    ["pizza"] = {
+        label = "Pizza",
+        weight = 400,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une pizza probablement surgelé à l'origine.",
+        client = {
+            image = "pizza.png",
+            export = 'qbx_Ab_Consomable.pizza'
+        }     
+    },
+
+
+-- IT Items
+
+    ["good_carte_mere"] = {
+        label = "Carte mère",
+        weight =1000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Une carte mère en bon état",
+        client = {
+            image = "good_carte_mere.png",
+            export = 'qbx_Ab_informatic.good_carte_mere'
+        }
+        
+    },
+    ["bad_carte_mere"] = {
+        label = "Carte mère cassé",
+        weight = 1000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Une carte mère cassé",
+        client = {
+            image = "bad_carte_mere.png",
+            export = 'qbx_Ab_informatic.bad_carte_mere'
+        }
+        
+    },
+    ["diagnostic_kit"] = {
+        label = "Outils de diagnostique",
+        weight = 15000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un kit complet permettant de dignostiquer un ordinateur, et d'autre choses.",
+        client = {
+            image = "Ordi_Kit_Diag.png",
+            export = 'qbx_Ab_informatic.diagnostic_kit'
+        }
+        
+    },
+    ["repear_kit"] = {
+        label = "Outils de réparation",
+        weight = 15000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un kit d'outils permettant de réparer un ordinateur cassé, et d'autre choses.",
+        client = {
+            image = "Ordi_Kit_Repa.png",
+            export = 'qbx_Ab_informatic.repear_kit'
+        }
+        
+    },
+    ["etain"] = {
+        label = "Fil d'étein",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "utile pour les circuit électriques",
+        client = {
+            image = "etain.png",
+        }
+        
+    },
+    ["circuit_elec"] = {
+        label = "Circuit électrique",
+        weight = 800,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Pour fabriquer une carte mère",
+        client = {
+            image = "circuit_elec.png",
+        }
+        
+    },
+    ["resistance"] = {
+        label = "Résistance",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "C'est un composant électronique",
+        client = {
+            image = "resistance.png",
+        }
+        
+    },
+    ["condensateur"] = {
+        label = "Condensateur",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "C'est un composant électronique",
+        client = {
+            image = "condensateur.png",
+        }
+        
+    },
+    ["transistor"] = {
+        label = "Transistor",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "C'est un composant électronique",
+        client = {
+            image = "transistor.png",
+        }
+        
+    },
+    ["fersouder"] = {
+        label = "Fer à souder",
+        weight = 4000,
+        stack = false,
+        close = false,
+        description = "Nécéssaire pour faire de la soudure sur des composants électroniques",
+        client = {
+            image = "fersouder.png",
+        }
+        
+    },
+
+    ["floppydisk_av"] = {
+        label = "Disquette antivirus",
+        weight = 200,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Une disquette pour se débarasser d'un virus informatique sur un ordinateur",
+        client = {
+            image = "floppydisk_av.png",
+        }
+    },
+    ["floppydisk_av_hs"] = {
+        label = "Disquette HS",
+        weight = 200,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Une disquette hors service à cause d'un virus.",
+        client = {
+            image = "floppydisk_av_hs.png",
+        }
+    },
+
+    ["it_ticket_ss"] = {
+        label = "Ticket CTG sous-sol",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion au sous-sol.",
+        client = {
+            image = "it_ticket_ss.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_ss'
+        }
+    },
+    ["it_ticket_rdc"] = {
+        label = "Ticket CTG RDC",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion pour le rez-de-chaussée.",
+        client = {
+            image = "it_ticket_rdc.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_rdc'
+        }
+    },
+    ["it_ticket_1"] = {
+        label = "Ticket CTG Cubicles",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion pour les Cubicles.",
+        client = {
+            image = "it_ticket_1.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_1'
+        }
+    },
+    ["it_ticket_2"] = {
+        label = "Ticket CTG Bureaux",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion pour les Bureaux.",
+        client = {
+            image = "it_ticket_2.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_2'
+        }
+    },
+    ["it_ticket_3"] = {
+        label = "Ticket CTG espace de vie",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion pour l'espace de vie'.",
+        client = {
+            image = "it_ticket_3.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_3'
+        }
+    },
+    ["it_ticket_4"] = {
+        label = "Ticket CTG archives",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion pour les archives.",
+        client = {
+            image = "it_ticket_4.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_4'
+        }
+    },
+    ["it_ticket_5"] = {
+        label = "Ticket CTG CEO",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un ticket indiquant un appel aux chargés de télégestion pour le CEO.",
+        client = {
+            image = "it_ticket_5.png",
+            export = 'qbx_Ab_ImagesDoc.it_ticket_5'
+        }
+    },
+
+-- CSC
+
+    ["csc_doc_a"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un document de comptabilité qui date du 02 Fevrier 2006.",
+        consume = 0,
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_a'
+        }        
+    },
+    ["csc_doc_b"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 03 Juin 1995.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_b'
+        }        
+    },
+    ["csc_doc_c"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 04 Janvier 1999.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_c'
+        }        
+    },
+    ["csc_doc_d"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 05 Fevrier 2004.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_d'
+        }        
+    },
+    ["csc_doc_e"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 10 Octobre 2023.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_e'
+        }        
+    },
+    ["csc_doc_f"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 11 Juin 2008.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_f'
+        }        
+    },
+    ["csc_doc_g"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 11 Décembre 2013.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_g'
+        }        
+    },
+    ["csc_doc_h"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 12 Fevrier 1997.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_h'
+        }        
+    },
+    ["csc_doc_i"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 14 Aout 2021.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_i'
+        }        
+    },
+    ["csc_doc_j"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 15 Mai 1994.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_j'
+        }        
+    },
+    ["csc_doc_k"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 16 Octobre 2002.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_k'
+        }        
+    },
+    ["csc_doc_l"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 17 Mars 1999.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_l'
+        }        
+    },
+    ["csc_doc_m"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 18 Novembre 2019.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_m'
+        }        
+    },
+    ["csc_doc_n"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 21 Fevrier 1998.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_n'
+        }        
+    },
+    ["csc_doc_o"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 21 Mars 2017.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_o'
+        }        
+    },
+    ["csc_doc_p"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 22 Janvier 2001.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_p'
+        }        
+    },
+    ["csc_doc_q"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 26 Octobre 2002.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_q'
+        }        
+    },
+    ["csc_doc_r"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 26 Novembre 1994.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_r'
+        }        
+    },
+    ["csc_doc_s"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 27 Juillet 1995.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_s'
+        }        
+    },
+    ["csc_doc_t"] = {
+        label = "Document de comptabilité",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Un document de comptabilité qui date du 28 Septembre 2019.",
+        client = {
+            image = "doc_compta.png",
+            export = 'qbx_Ab_document_CSC.csc_doc_t'
+        }        
+    },
+-- special items
+
+    ["jeton"] = {
+        label = "Bon point",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un jeton qui récompense votre travail",
+        client = {
+            image = "jeton.png",
+            export = 'qbx_Ab_Consomable.jeton'
+        }
+        
+    },
+    ["routeur"] = {
+        label = "Routeur portable",
+        weight = 1000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un routeur portable pour un accès personnel à internet. Probablement interdit dans l'entreprise.",
+        client = {
+            image = "routeur.png",
+        }
+        
+    },
+    ["formulaire_mutation"] = {
+        label = "Formulaire de mutation",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un formulaire pour permettre à un superviseur de muter un employé à un autre poste.",
+        client = {
+            image = "formulaire_mutation.png",
+            export = 'qbx_Ab_Admin.formulaire_mutation'
+        }
+        
+    },
+    ["vhs_horreur"] = {
+        label = "VHS",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Nécéssite un magnétoscope pour regarder le film d'horreur.",
+        client = {
+            image = "vhs_horreur.png",
+            export = 'qbx_Ab_SmallStuff.vhs_horreur'
+        }
+        
+    },
+    ["vhs_x1"] = {
+        label = "VHS X",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = 'Nécéssite un magnétoscope. Il est inscrit "Ingrid 1/2',
+        client = {
+            image = "vhs_x.png",
+            export = 'qbx_Ab_SmallStuff.vhs_x1'
+        }
+        
+    },
+    ["vhs_x2"] = {
+        label = "VHS X",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = 'Nécéssite un magnétoscope. Il est inscrit "Ingrid 2/2',
+        client = {
+            image = "vhs_x.png",
+            export = 'qbx_Ab_SmallStuff.vhs_x2'
+        }
+        
+    },
+    ["formulaire_empty"] = {
+        label = "Formulaire vide",
+        weight = 10,
+        stack = true,
+        close = true,
+        consume = 1,
+        description = "Un formulaire à remplir.",
+        client = {
+            image = "formulaire_empty.png",
+            export = 'qbx_Ab_Form.formulaire_empty'
+        }
+        
+    },
+    ["formulaire_full"] = {
+        label = "Formulaire rempli",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Un formulaire rempli.",
+        client = {
+            image = "paperprint.png",
+            export = 'qbx_Ab_Form.formulaire_full'
+        }
+        
+    },
+    
+
+-- Courrier à lire
+
+    ["mail_good_1"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_1'
+        }        
+    },
+    ["mail_good_2"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_2'
+        }        
+    },
+    ["mail_good_3"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_3'
+        }        
+    },
+    ["mail_good_4"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_4'
+        }        
+    },
+    ["mail_good_5"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_5'
+        }        
+    },
+    ["mail_good_6"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_6'
+        }        
+    },
+    ["mail_good_7"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_7'
+        }        
+    },
+    ["mail_good_8"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_8'
+        }        
+    },
+    ["mail_good_9"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_9'
+        }        
+    },
+    ["mail_good_10"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_10'
+        }        
+    },
+    ["mail_good_11"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_11'
+        }        
+    },
+    ["mail_good_12"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_12'
+        }        
+    },
+    ["mail_good_13"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_good_13'
+        }        
+    },
+    ["mail_bad_1"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_1'
+        }        
+    },
+    ["mail_bad_2"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_2'
+        }        
+    },
+    ["mail_bad_3"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_3'
+        }        
+    },
+    ["mail_bad_4"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_4'
+        }        
+    },
+    ["mail_bad_5"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_5'
+        }        
+    },
+    ["mail_bad_6"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_6'
+        }        
+    },
+    ["mail_bad_7"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_7'
+        }        
+    },
+    ["mail_bad_8"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_8'
+        }        
+    },
+    ["mail_bad_9"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_9'
+        }        
+    },
+    ["mail_bad_10"] = {
+        label = "Courrier à lire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Un courrier à lire puis ranger au bon endroit.",
+        consume = 0,
+        client = {
+            image = "mailread.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_bad_10'
+        }        
+    },
+
+-- Courrier à livrer
+
+    ["mail_15a"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 15-A.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_15a'
+        }        
+    },
+    ["mail_9b"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 9-B.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_9b'
+        }        
+    },
+    ["mail_17c"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 17-C.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_17c'
+        }        
+    },
+    ["mail_8d"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 8-D.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_8d'
+        }        
+    },
+    ["mail_3e"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 3-E.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_3e'
+        }        
+    },
+    ["mail_12f"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 12-F.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_12f'
+        }        
+    },
+    ["mail_13g"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 13-G.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_13g'
+        }        
+    },
+    ["mail_6h"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 6-H.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_6h'
+        }        
+    },
+    ["mail_11i"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 11-I.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_11i'
+        }        
+    },
+    ["mail_22j"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 22-J.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_22j'
+        }        
+    },
+    ["mail_4k"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 4-K.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_4k'
+        }        
+    },
+    ["mail_19l"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 19-L.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_19l'
+        }        
+    },
+    ["mail_2m"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 2-M.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_2m'
+        }        
+    },
+    ["mail_18n"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 18-N.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_18n'
+        }        
+    },
+    ["mail_1o"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 1-O.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_1o'
+        }        
+    },
+    ["mail_5p"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 5-P.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_5p'
+        }        
+    },
+    ["mail_20q"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 20-Q.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_20q'
+        }        
+    },
+    ["mail_16r"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 16-R.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_16r'
+        }        
+    },
+    ["mail_20s"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 20-S.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_20s'
+        }        
+    },
+    ["mail_10t"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 10-T.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_10t'
+        }        
+    },
+    ["mail_14u"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 14-U.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_14u'
+        }        
+    },
+    ["mail_24v"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 24-V.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_24v'
+        }        
+    },
+    ["mail_7x"] = {
+        label = "Courrier à livrer",
+        weight = 100,
+        stack = false,
+        close = false,
+        description = "Un courrier à livrer au bureau 7-X.",
+        consume = 0,
+        client = {
+            image = "maildelivery.png",
+            export = 'qbx_Ab_ReadMail_doc.mail_7x'
+        }        
+    },
+
+-- Document base
+
+
+    ["paperprint"] = {
+        label = "",
+        weight = 100,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = "nkt-printer-main.paperprint",
+            image = "paperprint.png",
+        }        
+    },
+    ["doctri_it"] = {
+        label = "Document bleu claire",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document de télégestion à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_it.png",
+        }        
+    },
+    ["doctri_cafet"] = {
+        label = "Document jaune",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document d'artisanat culinaire à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_cafet.png",
+        }        
+    },
+    ["doctri_archive"] = {
+        label = "Document truquoise",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document de consignation à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_archive.png",
+        }        
+    },
+    ["doctri_menage"] = {
+        label = "Document orange",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document sanitaire à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_menage.png",
+        }        
+    },
+    ["doctri_compta"] = {
+        label = "Document rouge",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document budgétaire à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_compta.png",
+        }        
+    },
+    ["doctri_accueil"] = {
+        label = "Document rose",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document de coordination fonctionnel à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_accueil.png",
+        }        
+    },
+    ["doctri_com"] = {
+        label = "Document violet",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document Transmissionnel à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_com.png",
+        }        
+    },
+    ["doctri_inf"] = {
+        label = "Document vert",
+        weight = 100,
+        stack = false,
+        close = true,
+        description = "Document thérapeutique à trier.",
+        consume = 0,
+        client = {
+            image = "doctri_inf.png",
+        }        
+    },
+
+
+-- clé et pass
+
+    ["card_allacess"] = {
+        label = "Carte passe-partout",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_all_access.png",
+        }        
+    },
+    ["card_ceo"] = {
+        label = "Carte noire",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_black.png",
+        }        
+    },
+    ["card_drh"] = {
+        label = "Carte dorée",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_gold.png",
+        }        
+    },
+    ["card_it"] = {
+        label = "Carte bleu clair",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_blue.png",
+        }        
+    },
+    ["card_cafet"] = {
+        label = "Carte jaune",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0.5,
+        client = {
+            image = "card_yellow.png",
+        }        
+    },
+    ["card_archive"] = {
+        label = "Carte turquoise",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_teal.png",
+        }        
+    },
+    ["card_menage"] = {
+        label = "Carte orange",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_orange.png",
+        }        
+    },
+    ["card_compta"] = {
+        label = "Carte rouge",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_red.png",
+        }        
+    },
+    ["card_accueil"] = {
+        label = "Carte rose",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_pink.png",
+        }        
+    },
+    ["card_com"] = {
+        label = "Carte violette",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_purple.png",
+        }        
+    },
+    ["card_inf"] = {
+        label = "Carte verte",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_green.png",
+        }        
+    },
+    ["card_roof"] = {
+        label = "Carte grise",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "card_silver.png",
+        }        
+    },
+
+    ["key_allacess"] = {
+        label = "Passe-partout",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_all_access.png",
+        }        
+    },
+    ["key_ceo"] = {
+        label = "Clé noire",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_black.png",
+        }        
+    },
+    ["key_drh"] = {
+        label = "Clé dorée",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_gold.png",
+        }        
+    },
+    ["key_it"] = {
+        label = "Clé bleu clair",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_blue.png",
+        }        
+    },
+    ["key_cafet"] = {
+        label = "Clé jaune",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_yellow.png",
+        }        
+    },
+    ["key_archive"] = {
+        label = "Clé turquoise",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_teal.png",
+        }        
+    },
+    ["key_menage"] = {
+        label = "Clé orange",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 1,
+        client = {
+            image = "key_orange.png",
+        }        
+    },
+    ["key_compta"] = {
+        label = "Clé rouge",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_red.png",
+        }        
+    },
+    ["key_accueil"] = {
+        label = "Clé rose",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_pink.png",
+        }        
+    },
+    ["key_com"] = {
+        label = "Clé violette",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_purple.png",
+        }        
+    },
+    ["key_inf"] = {
+        label = "Clé verte",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_green.png",
+        }        
+    },
+    ["key_roof"] = {
+        label = "Clé grise",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_silver.png",
+        }        
+    },
+    ["key_taser"] = {
+        label = "Clé zone taser",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_taser.png",
+        }        
+    },
+    ["key_special"] = {
+        label = "Clé Spécial",
+        weight = 100,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "key_special.png",
+        }        
+    },
+
+-- Shadow items
+    -- black market
+        ["cdrom_blackmarket"] = {
+            label = "CD-ROM Black Market",
+            weight = 100,
+            stack = false,
+            close = false,
+            description = "Un CD-ROM qui donne accès au livraison du black market. A utiliser avec un ordinateur.",
+            consume = 0,
+            client = {
+                image = "cdrom_blackmarket.png",
+                export = 'qbx_Ab_AlcoolContrebande.cdrom_blackmarket'
+            }        
+        },
+        ["cdrom_blackmarket_broken"] = {
+            label = "CD-ROM cassé",
+            weight = 100,
+            stack = false,
+            close = false,
+            description = "Un étrange CD-ROM cassé.",
+            consume = 0,
+            client = {
+                image = "cdrom_blackmarket_broken.png",
+                export = 'qbx_Ab_AlcoolContrebande.cdrom_blackmarket_broken'
+            }        
+        },
+        ["golden_ducky"] = {
+            label = "Golden Ducky",
+            weight = 300,
+            stack = false,
+            close = false,
+            description = "il semble en or et de valeur.",
+            consume = 0,
+            client = {
+                image = "golden_ducky.png",
+                export = 'qbx_Ab_AlcoolContrebande.golden_ducky'
+            }        
+        },
+
+    -- fumette
+        ["os_weed"] = {
+            label = "Pochon de weed",
+            weight = 300,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "weed_pochon.png",
+                export = 'qbx_Ab_Weed.os_weed'
+            },
+            buttons = {
+                {
+                    label = 'Rouler un joint',
+                    action = function(slot)
+                        --print('roule un join')
+                        local paperhere = exports.ox_inventory:GetItemCount("os_rollpaper")
+                        local cighere = exports.ox_inventory:GetItemCount("cigarette")
+                        src = source
+                        
+                        --print (json.encode(paperhere))
+                    
+                        if paperhere > 0 then
+                            --print ("paper present")
+                            if cighere > 0 then 
+                                --print ("cig present")
+                                -- Appel au serveur pour retirer les items et ajouter un joint
+                                TriggerServerEvent('qbx_Ab_Weed:craftJoin', slot)
+                                TriggerServerEvent('qbx_Ab_Garbages:server:addTrash', 'Pochon_empty')
+                            else
+                                --print ("cig absent")
+                                exports.qbx_core:Notify("il faut une cigarette", 'error', 7000)
+                            end
+                        else
+                            --print ("paper absent")
+                            exports.qbx_core:Notify("il faut du papier à rouler", 'error', 7000)
+                        end
+                    end
+                },
+            }         
+        },
+        ["os_rollpaper"] = {
+            label = "Papier à rouler",
+            weight = 100,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "weed_papier.png",
+                export = 'qbx_Ab_Weed.os_rollpaper'
+            },       
+        },
+        ["os_joint"] = {
+            label = "Joint",
+            weight = 200,
+            stack = true,
+            close = true,
+            client = {
+                image = "joint.png",
+                export = 'qbx_Ab_Weed.os_joint'
+            },       
+        },
+        ["cig_pack"] = {
+            label = "Paquet de cigarette",
+            weight = 500,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "cig_pack.png",
+                export = 'qbx_Ab_Weed.cig_pack'
+            },
+            buttons = {
+                {
+                    label = 'Ouvrir le paquet',
+                    action = function(slot)
+                        src = source
+
+                        TriggerServerEvent('qbx_Ab_Weed:openCigPack', slot)
+
+                    end
+                },
+            }         
+        },
+        ['cigarette'] = {
+            label = "Cigarette",
+            weight = 25,
+            stack = true,
+            close = true,
+            client = {
+                image = "cigarette.png",
+                export = 'qbx_Ab_Weed.cigarette'
+            },       
+        },
+        ['cigare'] = {
+            label = "cigare",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "cigare.png",
+                export = 'qbx_Ab_Weed.cigare'
+            },       
+        },
+        ["water_can"] = {
+            label = "Arrosoir",
+            weight = 800,
+            stack = false,
+            close = false,
+            consume = 0,
+            description = "Un Arrosoir vide.",
+            client = {
+                image = "water_can.png",
+                export = 'qbx_Ab_Weed.water_can'
+            },       
+        },
+        ["water_can_full"] = {
+            label = "Arrosoir plein d'eau",
+            weight = 5000,
+            stack = false,
+            close = false,
+            consume = 0,
+            description = "Un Arrosoir plein d'eau.",
+            client = {
+                image = "water_can_full.png",
+                export = 'qbx_Ab_Weed.water_can_full'
+            },       
+        },
+
+    -- alcool
+        ['gin_bottle'] = {
+            label = "Bouteille de Gin",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille de Gin Jean.",
+            client = {
+                image = "gin_bottle.png",
+                export = 'qbx_Ab_AlcoolContrebande.gin_bottle'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'gin_bottle', 'gin_goblet', 5 , itemUsed, 'gin_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['gin_goblet'] = {
+            label = "Goblet de Gin",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.gin_goblet'
+            },       
+        },
+        ['alanis_bottle'] = {
+            label = "Bouteille d'Al'Anis",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille d'Al'Anis.",
+            client = {
+                image = "alanis_bottle.png",
+                export = 'qbx_Ab_AlcoolContrebande.alanis_bottle'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'alanis_bottle', 'alanis_goblet', 5 , itemUsed, 'alanis_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['alanis_goblet'] = {
+            label = "Goblet d'Al'Anis pur",
+            weight = 300,
+            stack = true,
+            close = true,
+            description = "Goblet d'Al'Anis pur, il peut être une bonne idée d'ajouter de l'eau.",
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.alanis_goblet'
+            },       
+        },
+        ['alanis_goblet_watered'] = {
+            label = "Goblet d'Al'Anis dilué",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.alanis_goblet_watered'
+            },       
+        },
+        ['champagne_bottle'] = {
+            label = "Bouteille de Champagne",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille du célébre Champagne Kippik.",
+            client = {
+                image = "champagne_bottle.png",
+                export = 'qbx_Ab_AlcoolContrebande.champagne_bottle'
+            },
+            buttons = {
+                {
+                    label = 'Servir des flûtes',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "flute_empty"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'champagne_bottle', 'champagne_flute', 5 , itemUsed, 'champagne_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 flûtes.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }       
+        },
+        ["flute_empty"] = {
+            label = "Flûte vide",
+            weight = 200,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Une Flûte à champagne vide",
+            client = {
+                image = "flute_empty.png",
+                export = 'qbx_Ab_Eau.flute_empty'
+            }
+            
+        },
+        ['champagne_flute'] = {
+            label = "Flûte de Champagne",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "champagne_flute.png",
+                export = 'qbx_Ab_AlcoolContrebande.champagne_flute'
+            },       
+        },
+
+        ['windy_bottle_orange'] = {
+            label = "Bouteille de Windy orange",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille de Windy saveur passion d'Amérique du sud.",
+            client = {
+                image = "windy_bottle_orange.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_bottle_orange'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'windy_bottle_orange', 'windy_goblet_orange', 5 , itemUsed, 'windy_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['windy_goblet_orange'] = {
+            label = "Goblet de Windy Orange'",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_goblet_orange'
+            },       
+        },
+        ['windy_bottle_rose'] = {
+            label = "Bouteille de Windy rose",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille de Windy saveur passion, fraise, litchi et pétale de rose.",
+            client = {
+                image = "windy_bottle_rose.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_bottle_rose'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'windy_bottle_rose', 'windy_goblet_rose', 5 , itemUsed, 'windy_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['windy_goblet_rose'] = {
+            label = "Goblet de Windy rose'",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_goblet_rose'
+            },       
+        },
+        ['windy_bottle_bleu'] = {
+            label = "Bouteille de Windy bleu",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille de Windy saveur cerise et gingembre.",
+            client = {
+                image = "windy_bottle_bleu.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_bottle_bleu'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'windy_bottle_bleu', 'windy_goblet_bleu', 5 , itemUsed, 'windy_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['windy_goblet_bleu'] = {
+            label = "Goblet de Windy bleu'",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_goblet_bleu'
+            },       
+        },
+        ['windy_bottle_jaune'] = {
+            label = "Bouteille de Windy jaune",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille de Windy saveur passion et agrumes.",
+            client = {
+                image = "windy_bottle_jaune.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_bottle_jaune'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'windy_bottle_jaune', 'windy_goblet_jaune', 5 , itemUsed, 'windy_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['windy_goblet_jaune'] = {
+            label = "Goblet de Windy jaune",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_goblet_jaune'
+            },       
+        },
+        ['windy_bottle_verte'] = {
+            label = "Bouteille de Windy verte",
+            weight = 1000,
+            stack = true,
+            close = true,
+            description = "Une Bouteille de Windy saveur cannabis.",
+            client = {
+                image = "windy_bottle_verte.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_bottle_verte'
+            },
+            buttons = {
+                {
+                    label = 'Servir des verres',
+                    action = function(slot)
+                        src = source
+                        local itemUsed = "goblet"
+                        local goblethere = exports.ox_inventory:GetItemCount(itemUsed)
+                        if goblethere >= 5 then 
+                            TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openBottle', slot, 'windy_bottle_verte', 'windy_goblet_verte', 5 , itemUsed, 'windy_empty')
+                        else
+                            exports.qbx_core:Notify("il faut au moins 5 goblets.", 'error', 7000)
+                        end    
+                        
+    
+                    end
+                },
+            }         
+        },
+        ['windy_goblet_verte'] = {
+            label = "Goblet de Windy verte",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "goblet_alcool.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_goblet_verte'
+            },       
+        },
+
+        ['beer_pack'] = {
+            label = "Pack de bières",
+            weight = 3200,
+            stack = false,
+            close = true,
+            description = "Un pack de bières Graou.",
+            client = {
+                image = "beer_pack.png",
+                export = 'qbx_Ab_AlcoolContrebande.beer_pack'
+            },
+            buttons = {
+                {
+                    label = 'Ouvrir le pack',
+                    action = function(slot)
+                        src = source
+                        TriggerServerEvent('qbx_Ab_AlcoolContrebande:server:openPack', slot, 'beer_pack', 'beer', 6 , 'beer_pack_empty')
+   
+                    end
+                },
+            }         
+        },
+        ['beer'] = {
+            label = "Bière Graou'",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "beer.png",
+                export = 'qbx_Ab_AlcoolContrebande.beer'
+            },       
+        },
+
+    -- Hallu
+
+        ['desinfectos'] = {
+            label = "Désinfectos",
+            weight = 500,
+            stack = true,
+            close = true,
+            description = "Un produit qui désinfecte et protège les main pendant une minute.",
+            client = {
+                image = "desinfectos.png",
+                export = 'qbx_Ab_SpecialPlant.desinfectos'
+            },       
+        },
+        ["flower_special"] = {
+            label = "Fleur étrange",
+            weight = 100,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "flower_special.png",
+                export = 'qbx_Ab_SpecialPlant.flower_special'
+            },
+            buttons = {
+                {
+                    label = 'Rouler un join',
+                    action = function(slot)
+                        local paperhere = exports.ox_inventory:GetItemCount("os_rollpaper")
+                        local cighere = exports.ox_inventory:GetItemCount("cigarette")
+                        if paperhere >= 3 then
+                            if cighere >= 2 then 
+                                -- Appel au serveur pour retirer les items et ajouter un joint
+                                TriggerServerEvent('qbx_Ab_SpecialPlant:server:craftJoin', slot)
+                            else
+                                exports.qbx_core:Notify("il faut au moins deux cigarettes", 'error', 7000)
+                            end
+                        else
+                            exports.qbx_core:Notify("il faut au moins trois feuilles de papier à rouler", 'error', 7000)
+                        end
+                    end
+                },
+                {
+                    label = 'Faire un thé',
+                    action = function(slot)
+                        local teahere = exports.ox_inventory:GetItemCount("ginseng_tea")
+                        if teahere >= 1 then 
+                            -- Appel au serveur pour retirer les items et ajouter un joint
+                            TriggerServerEvent('qbx_Ab_SpecialPlant:server:craftTea', slot)
+                        else
+                            exports.qbx_core:Notify("il faut du thé de Ginseng", 'error', 7000)
+                        end
+
+                    end
+                },
+            }         
+        },
+        ["joint_special"] = {
+            label = "Joint étrange",
+            weight = 300,
+            stack = true,
+            close = true,
+            client = {
+                image = "joint_special.png",
+                export = 'qbx_Ab_SpecialPlant.joint_special'
+            },       
+        },
+        ["tea_special"] = {
+            label = "Thé étrange",
+            weight = 500,
+            stack = true,
+            close = true,
+            description = "Thé artisanal qui semble altéré pour des effets allongé.",
+            client = {
+                image = "tea_special.png",
+                export = 'qbx_Ab_SpecialPlant.tea_special'
+            }
+            
+        },
+
+
+-- Item Menage
+
+    ["toilet_brush"] = {
+        label = "Brosse WC",
+        weight = 500,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Une brosse pour nettoyer les toilettes",
+        client = {
+            image = "toilet_brush.png",
+            export = 'qbx_Ab_CleanWipe.toilet_brush'
+        },       
+    },
+    ["wipe"] = {
+        label = "Lingette",
+        weight = 200,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une lingette pour nettoyer un table",
+        client = {
+            image = "wipe.png",
+            export = 'qbx_Ab_CleanWipe.wipe'
+        },       
+    },
+    ["bigtrash_empty"] = {
+        label = "Grand sac poubelle",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un grand sac poubelle vide pour une grande poubelle",
+        client = {
+            image = "bigtrash_empty.png",
+            export = 'qbx_Ab_Garbages.bigtrash_empty'
+        },       
+    },
+    ["bigtrash_full"] = {
+        label = "Grand sac poubelle plein",
+        weight = 20000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un grand sac poubelle plein.",
+        client = {
+            image = "bigtrash_full.png",
+            export = 'qbx_Ab_Garbages.bigtrash_full'
+        },       
+    },
+    ["smalltrash_empty"] = {
+        label = "Sac poubelle",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un sac poubelle vide pour une petite poubelle",
+        client = {
+            image = "smalltrash_empty.png",
+            export = 'qbx_Ab_Garbages.smalltrash_empty'
+        },       
+    },
+    ["smalltrash_full"] = {
+        label = "Sac poubelle plein",
+        weight = 5000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un sac poubelle plein.",
+        client = {
+            image = "smalltrash_full.png",
+            export = 'qbx_Ab_Garbages.smalltrash_full'
+        },       
+    },
+    ["mop"] = {
+        label = "Serpillère",
+        weight = 1500,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Pour nettoyer les taches au sol.",
+        client = {
+            image = "mop.png",
+            export = 'qbx_Ab_CleanFloor.mop'
+        },       
+    },
+    ["bucket"] = {
+        label = "Seau",
+        weight = 1000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un seau vide.",
+        client = {
+            image = "bucket.png",
+            export = 'qbx_Ab_CleanFloor.bucket'
+        },       
+    },
+    ["bucket_full"] = {
+        label = "Seau plein d'eau",
+        weight = 8000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Un seau plein d'eau.",
+        client = {
+            image = "bucket_full.png",
+            export = 'qbx_Ab_CleanFloor.bucket_full'
+        },       
+    },
+    ["clean_sign"] = {
+        label = "Panneau de ménage",
+        weight = 1000,
+        stack = true,
+        close = true,
+        description = "Un paneau pour signaler que le ménage et en cours.",
+        client = {
+            image = "clean_sign.png",
+            export = 'qbx_Ab_CleanFloor.clean_sign'
+        },       
+    },
+
+-- Trash items
+
+    ["stylo_fluo"] = {
+        label = "Stylo fluo",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        client = {
+            image = "stylo_fluo.png",
+            export = 'qbx_Ab_Garbages.stylo_fluo'
+        }    
+    },
+    ["papperclip"] = {
+        label = "Trombone",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un trombone",
+        client = {
+            image = "papperclip.png",
+            export = 'qbx_Ab_Garbages.papperclip'
+        }    
+    },
+    ["paille"] = {
+        label = "Une Paille",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        client = {
+            image = "paille.png",
+            export = 'qbx_Ab_Garbages.paille'
+            
+        }    
+    },
+    ["alimentation_wire"] = {
+        label = "Cable d'alimentation",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un cable d'alimentation pour charger un téléphone portable.",
+        client = {
+            image = "alimentation_wire.png",
+            export = 'qbx_Ab_Garbages.alimentation_wire'
+        }    
+    },
+    ["rusty_stapler"] = {
+        label = "Agrafeuse rouillé",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une agrafeuse qui a rouillé, probablement suite à une longue exposition à de la gelé.",
+        client = {
+            image = "rusty_stapler.png",
+            export = 'qbx_Ab_Garbages.rusty_stapler'
+        }    
+    },
+    ["used_post_it"] = {
+        label = "Post-it usagés",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un post-it remplie d'écriture incompréhensible.",
+        client = {
+            image = "used_post_it.png",
+            export = 'qbx_Ab_Garbages.used_post_it'
+        }    
+    },
+    ["scribbled_sheet"] = {
+        label = "Feuille gribouillée",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une feuille remplie de gribouillage.",
+        client = {
+            image = "scribbled_sheet.png",
+            export = 'qbx_Ab_Garbages.scribbled_sheet'
+        }    
+    },
+    ["empty_pen"] = {
+        label = "Stylo vide",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un stylo vidé de son encre et cassé.",
+        client = {
+            image = "empty_pen.png",
+            export = 'qbx_Ab_Garbages.empty_pen'
+        }    
+    },
+    ["broken_tape"] = {
+        label = "Cassette cassé",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une cassette cassé, la bande magnétique en sort",
+        client = {
+            image = "broken_tape.png",
+            export = 'qbx_Ab_Garbages.broken_tape'
+        }    
+    },
+    ["broken_fuzby"] = {
+        label = "Fuzby en panne",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une peluche électronique dans une état lamentable",
+        client = {
+            image = "broken_fuzby.png",
+            export = 'qbx_Ab_Garbages.broken_fuzby'
+        }    
+    },
+    ["cocola_empty"] = {
+        label = "Canette vide",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une canette vide de Cocola",
+        client = {
+            image = "cocola_empty.png",
+            export = 'qbx_Ab_Garbages.cocola_empty'
+        }    
+    },
+    ["jumbo_empty"] = {
+        label = "Canette vide",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une canette vide de Jumbo",
+        client = {
+            image = "jumbo_empty.png",
+            export = 'qbx_Ab_Garbages.jumbo_empty'
+        }    
+    },
+    ["sprout_empty"] = {
+        label = "Canette vide",
+        weight = 300,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une canette vide de Sprout",
+        client = {
+            image = "sprout_empty.png",
+            export = 'qbx_Ab_Garbages.sprout_empty'
+        }    
+    },
+    ["roar_empty"] = {
+        label = "Emballage vide",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un emballage vide de Roar",
+        client = {
+            image = "roar_empty.png",
+            export = 'qbx_Ab_Garbages.roar_empty'
+        }    
+    },
+    ["swacks_empty"] = {
+        label = "Emballage vide",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un emballage vide de Swacks",
+        client = {
+            image = "swacks_empty.png",
+            export = 'qbx_Ab_Garbages.swacks_empty'
+        }    
+    },
+    ["bellevillewood_empty"] = {
+        label = "Emballage vide",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un emballage vide de Bellevillewood",
+        client = {
+            image = "bellevillewood_empty.png",
+            export = 'qbx_Ab_Garbages.bellevillewood_empty'
+        }    
+    },
+    ["Pochon_empty"] = {
+        label = "Pochon vide",
+        weight = 100,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un pochon vide avec une odeur suspecte.",
+        client = {
+            image = "Pochon_empty.png",
+            export = 'qbx_Ab_Garbages.Pochon_empty'
+        }    
+    },
+    ["cig_butt"] = {
+        label = "Mégot de cigarette",
+        weight = 25,
+        stack = true,
+        close = false,
+        consume = 0,
+        client = {
+            image = "cig_butt.png",
+            export = 'qbx_Ab_Garbages.cig_butt'
+        }    
+    },
+    ["cigare_butt"] = {
+        label = "Mégot de cigare",
+        weight = 50,
+        stack = true,
+        close = false,
+        consume = 0,
+        client = {
+            image = "cigare_butt.png",
+            export = 'qbx_Ab_Garbages.cigare_butt'
+        }    
+    },
+    ["joint_butt"] = {
+        label = "Mégot de joint",
+        weight = 25,
+        stack = true,
+        close = false,
+        consume = 0,
+        client = {
+            image = "joint_butt.png",
+            export = 'qbx_Ab_Weed.joint_butt'
+        }    
+    },
+    ["wipe_dirty"] = {
+        label = "Lingette sale",
+        weight = 200,
+        stack = true,
+        close = false,
+        consume = 0,
+        client = {
+            image = "wipe_dirty.png",
+            export = 'qbx_Ab_Garbages.wipe_dirty'
+        }    
+    },
+    -- alcool 
+        ["gin_empty"] = {
+            label = "Bouteille de Gin vide",
+            weight = 300,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Une bouteille de Gin vide",
+            client = {
+                image = "gin_empty.png",
+                export = 'qbx_Ab_AlcoolContrebande.gin_empty'
+            }    
+        },
+        ["champagne_empty"] = {
+            label = "Bouteille de Champagne vide",
+            weight = 300,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Une bouteille de Champagne vide",
+            client = {
+                image = "champagne_empty.png",
+                export = 'qbx_Ab_AlcoolContrebande.champagne_empty'
+            }    
+        },
+        ["windy_empty"] = {
+            label = "Bouteille de Windy vide",
+            weight = 300,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Une bouteille de Windy vide",
+            client = {
+                image = "windy_empty.png",
+                export = 'qbx_Ab_AlcoolContrebande.windy_empty'
+            }    
+        },
+        ["beer_pack_empty"] = {
+            label = "Pack vide de bière",
+            weight = 200,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Un pack vide de bière",
+            client = {
+                image = "beer_pack_empty.png",
+                export = 'qbx_Ab_AlcoolContrebande.beer_pack_empty'
+            }    
+        },
+        ["beer_empty"] = {
+            label = "Bière vide",
+            weight = 200,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Une bière vide Graou",
+            client = {
+                image = "beer_empty.png",
+                export = 'qbx_Ab_AlcoolContrebande.beer_empty'
+            }    
+        },
+        ["alanis_empty"] = {
+            label = "Bouteille vide d'Al'Anis",
+            weight = 200,
+            stack = true,
+            close = false,
+            consume = 0,
+            description = "Une bouteille d'Al'Anis vide",
+            client = {
+                image = "alanis_empty.png",
+                export = 'qbx_Ab_AlcoolContrebande.alanis_empty'
+            }    
+        },
+
+-- Medical Item
+    --base
+        ["medical_kit"] = {
+            label = "Kit Médical",
+            weight = 3000,
+            stack = false,
+            close = true,
+            description = "Pour soigner toute les blessures et réanimer quelqu'un d'inconscient.",
+            consume = 0,
+            client = {
+                image = "medical_kit.png",
+                export = 'qbx_Ab_Medic.medical_kit'
+            }    
+        },
+        ["bandage"] = {
+            label = "Bandage",
+            weight = 500,
+            stack = true,
+            close = false,
+            description = "Pour soigner les petites blessures.",
+            consume = 0,
+            client = {
+                image = "bandage.png",
+                export = 'qbx_Ab_Medic.bandage'
+            }    
+        },
+        ["stethoscope"] = {
+            label = "Stéthoscope",
+            weight = 1000,
+            stack = false,
+            close = false,
+            description = "Pour examiner un patient.",
+            consume = 0,
+            client = {
+                image = "stethoscope.png",
+                export = 'qbx_Ab_Medic.Stéthoscope'
+            }    
+        },
+        ["tensiometre"] = {
+            label = "Tensiomètre",
+            weight = 1500,
+            stack = false,
+            close = false,
+            description = "Pour verifier la tension d'un patient.",
+            consume = 0,
+            client = {
+                image = "tensiometre.png",
+                export = 'qbx_Ab_Medic.tensiometre'
+            }    
+        },
+        ["ethylostest"] = {
+            label = "Ethylotest",
+            weight = 300,
+            stack = false,
+            close = false,
+            description = "Pour verifier le taux d'alcoolémie d'un patient.",
+            consume = 0,
+            client = {
+                image = "ethylostest.png",
+                export = 'qbx_Ab_Medic.ethylostest'
+            }    
+        },
+    --médicaments
+        ["anxiolytique"] = {
+            label = "Anxiolytique",
+            weight = 100,
+            stack = true,
+            close = true,
+            description = "Une bonne méthode pour contrer le stress.",
+            client = {
+                image = "anxiolytique.png",
+                export = 'qbx_Ab_Medicaments.anxiolytique'
+            }    
+        },
+        ["beta_bloquant"] = {
+            label = "Bêta-bloquant",
+            weight = 100,
+            stack = true,
+            close = true,
+            description = "Une méthode rapide est puissante pour bloquer le stress.",
+            client = {
+                image = "beta_bloquant.png",
+                export = 'qbx_Ab_Medicaments.beta_bloquant'
+            }    
+        },
+        ["vitamines"] = {
+            label = "Vitamines",
+            weight = 100,
+            stack = true,
+            close = true,
+            description = "Une méthode douce pour éviter les excès de fatigues et réduire les symptomes d'ébriété.",
+            client = {
+                image = "vitamines.png",
+                export = 'qbx_Ab_Medicaments.vitamines'
+            }    
+        },
+        ["modafinil"] = {
+            label = "Modafinil",
+            weight = 100,
+            stack = true,
+            close = true,
+            description = "Un médicament puissant contre la fatigue.",
+            client = {
+                image = "modafinil.png",
+                export = 'qbx_Ab_Medicaments.modafinil'
+            }    
+        },
+        ["medicament"] = {
+            label = "Médicament",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "medicament.png",
+                export = 'qbx_Ab_Medicaments.medicament'
+            }    
+        },
+        ["antidote"] = {
+            label = "Antidote",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "antidote.png",
+                export = 'qbx_Ab_SpecialRole.antidote'
+            }    
+        },
+
+    -- boite de médicaments
+
+        ["anxiolytique_box"] = {
+            label = "Boite d'anxiolytique",
+            weight = 500,
+            stack = true,
+            close = false,
+            description = "Une boite scéllé d'anxiolitiques.",
+            client = {
+                image = "anxiolytique_box.png",
+                export = 'qbx_Ab_Pharma.anxiolytique_box'
+            }    
+        },
+
+        ["beta_bloquant_box"] = {
+            label = "Boite de bêta-bloquant",
+            weight = 500,
+            stack = true,
+            close = false,
+            description = "Une boite scéllé de bêta-bloquants.",
+            client = {
+                image = "beta_bloquant_box.png",
+                export = 'qbx_Ab_Pharma.beta_bloquant_box'
+            }    
+        },
+
+        ["vitamines_box"] = {
+            label = "Boite de vitamines",
+            weight = 500,
+            stack = true,
+            close = false,
+            description = "Une boite scéllé de vitamines.",
+            client = {
+                image = "vitamines_box.png",
+                export = 'qbx_Ab_Pharma.vitamines_box'
+            }    
+        },
+
+        ["modafinil_box"] = {
+            label = "Boite de modafinils",
+            weight = 500,
+            stack = true,
+            close = false,
+            description = "Une boite scéllé de modafinils.",
+            client = {
+                image = "modafinil_box.png",
+                export = 'qbx_Ab_Pharma.modafinil_box'
+            }    
+        },
+
+        ["medicament_box"] = {
+            label = "Boite de médicaments",
+            weight = 500,
+            stack = true,
+            close = false,
+            description = "Une boite scéllé de médicaments.",
+            client = {
+                image = "medicament_box.png",
+                export = 'qbx_Ab_Pharma.medicament_box'
+            }    
+        },
+
+
+    --ingrédient médical
+        ["flacon_benzo"] = {
+            label = "Flacon de Benzodiazépines",
+            weight = 1200,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "flacon_benzo.png",
+                export = 'qbx_Ab_Medicaments.flacon_benzo'
+            },
+            buttons = {
+                {
+                    label = 'Ouvrir le flacon',
+                    action = function(slot)
+                        src = source
+
+                        TriggerServerEvent('qbx_Ab_Medicaments:server:openFlacon', slot, 'flacon_benzo', 'benzo_poudre')
+
+                    end
+                },
+            }         
+        },
+        ["benzo_poudre"] = {
+            label = "Benzodiazépines",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "benzo_poudre.png",
+                export = 'qbx_Ab_Medicaments.benzo_poudre'
+            }    
+        },
+        ["flacon_hydro"] = {
+            label = "Flacon de Hydroxyzine",
+            weight = 1200,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "flacon_hydro.png",
+                export = 'qbx_Ab_Medicaments.flacon_hydro'
+            },
+            buttons = {
+                {
+                    label = 'Ouvrir le flacon',
+                    action = function(slot)
+                        src = source
+
+                        TriggerServerEvent('qbx_Ab_Medicaments:server:openFlacon', slot, 'flacon_hydro', 'hydro_poudre')
+
+                    end
+                },
+            }         
+        },
+        ["hydro_poudre"] = {
+            label = "Hydroxyzine",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "hydro_poudre.png",
+                export = 'qbx_Ab_Medicaments.hydro_poudre'
+            }    
+        },
+        ["flacon_silice"] = {
+            label = "Flacon de silice colloïdale",
+            weight = 1200,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "flacon_silice.png",
+                export = 'qbx_Ab_Medicaments.flacon_silice'
+            },
+            buttons = {
+                {
+                    label = 'Ouvrir le flacon',
+                    action = function(slot)
+                        src = source
+
+                        TriggerServerEvent('qbx_Ab_Medicaments:server:openFlacon', slot, 'flacon_silice', 'silice_poudre')
+
+                    end
+                },
+            }         
+        },
+        ["silice_poudre"] = {
+            label = "Silice colloïdale",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "silice_poudre.png",
+                export = 'qbx_Ab_Medicaments.silice_poudre'
+            }    
+        },
+        ["flacon_modafinil"] = {
+            label = "Flacon de Modafinil",
+            weight = 1200,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "flacon_modafinil.png",
+                export = 'qbx_Ab_Medicaments.flacon_modafinil'
+            },
+            buttons = {
+                {
+                    label = 'Ouvrir le flacon',
+                    action = function(slot)
+                        src = source
+
+                        TriggerServerEvent('qbx_Ab_Medicaments:server:openFlacon', slot, 'flacon_modafinil', 'modafinil_poudre')
+
+                    end
+                },
+            }         
+        },
+        ["modafinil_poudre"] = {
+            label = "Modafinil en poudre",
+            weight = 100,
+            stack = true,
+            close = true,
+            client = {
+                image = "modafinil_poudre.png",
+                export = 'qbx_Ab_Medicaments.modafinil_poudre'
+            }    
+        },
+        ["branche_ginseng"] = {
+            label = "Racine de Ginseng",
+            weight = 500,
+            stack = true,
+            close = true,
+            consume = 0,
+            description = "Il faut la découper.",
+            client = {
+                image = "branche_ginseng.png",
+                export = 'qbx_Ab_Medicaments.branche_ginseng'
+            },
+                    
+        },
+        ["ginseng"] = {
+            label = "Ginseng",
+            weight = 50,
+            stack = true,
+            close = true,
+            client = {
+                image = "ginseng.png",
+                export = 'qbx_Ab_Medicaments.ginseng'
+            }    
+        },
+        ["empty_pills"] = {
+            label = "Pillule vide",
+            weight = 100,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "empty_pills.png",
+                export = 'qbx_Ab_Medicaments.empty_pills'
+            }    
+        },
+        ["empty_flacon"] = {
+            label = "Flacon vide",
+            weight = 200,
+            stack = true,
+            close = false,
+            consume = 0,
+            client = {
+                image = "empty_flacon.png",
+                export = 'qbx_Ab_Medicaments.empty_flacon'
+            }    
+        },
+
+-- Item tueurs
+
+    ["hamburger_poison"] = {
+        label = "Hamburger",
+        weight = 700,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Un Hamburger. Il faut être à table pour manger.",
+        client = {
+            image = "hamburger.png",
+            export = 'qbx_Ab_SpecialRole.hamburger_poison'
+        }
+        
+    },
+    ["salade_tomate_poison"] = {
+        label = "Salade de tomate",
+        weight = 450,
+        stack = true,
+        close = false,
+        consume = 0,
+        description = "Une salade avec de la tomate dedans. Il faut être à table pour manger.",
+        client = {
+            image = "salade_tomate.png",
+            export = 'qbx_Ab_SpecialRole.salade_tomate_poison'
+        }
+        
+    },
+    ["chococho_poison"] = {
+        label = "Chococho",
+        weight = 500,
+        stack = true,
+        close = true,
+        description = "Un bon chocolat chaud pour évacuer le stress",
+        client = {
+            image = "Chococho.png",
+            export = 'qbx_Ab_SpecialRole.chococho_poison'
+        }
+        
+    },
+    ["medicament_poison"] = {
+        label = "Médicament",
+        weight = 100,
+        stack = true,
+        close = true,
+        client = {
+            image = "medicament.png",
+            export = 'qbx_Ab_SpecialRole.medicament_poison'
+        }    
+    },
+    ["plante_poison"] = {
+        label = "Pousse de Mancenillier",
+        weight = 100,
+        stack = true,
+        close = true,
+        client = {
+            image = "plante_poison.png",
+            export = 'qbx_Ab_SpecialRole.plante_poison'
+        }    
+    },
+    ["poudre_poison"] = {
+        label = "Poison",
+        weight = 100,
+        stack = true,
+        close = true,
+        client = {
+            image = "poudre_poison.png",
+            export = 'qbx_Ab_SpecialRole.plante_poison'
+        }    
+    },
+    ["kit_sabotage"] = {
+        label = "Kit de Sabotage",
+        weight = 5000,
+        stack = true,
+        close = true,
+        consume = 0,
+        client = {
+            image = "kit_sabotage.png",
+            export = 'qbx_Ab_SpecialRole.kit_sabotage'
+        }    
+    },
+
+-- Communication Items
+
+    ["paper"] = {
+        label = "The Ramette",
+        weight = 2000,
+        stack = true,
+        close = true,
+        consume = 0,
+        description = "Une ramette de papier pour les imprimantes et photocopieurs.",
+        client = {
+            image = "paper.png",
+        },
+        -- buttons = {
+        --     {
+        --         label = 'Ouvrir le paquet',
+        --         action = function(slot)
+        --             src = source
+
+        --             TriggerServerEvent('qbx_Ab_Printer:server:paperball', slot)
+
+        --         end
+        --     },
+        -- }           
+    },
+
+    ["camera"] = {
+        label = "Caméra",
+        weight = 10000,
+        stack = false,
+        close = true,
+        consume = 0,
+        description = "Une caméra pour filmer ou prendre des photos.",
+        client = {
+            image = "camera.png",
+            export = 'qbx_Ab_Camera.camera'
+        }        
+    },
+
+    ["camera_broken"] = {
+        label = "Caméra HS",
+        weight = 10000,
+        stack = false,
+        close = false,
+        consume = 0,
+        description = "Une caméra hors service, elle peut être réparé.",
+        client = {
+            image = "camera_broken.png",
+            export = 'qbx_Ab_Camera.camera_broken'
+        }        
+    },
+
+    -- Doc Text
+
+    -- lettres
+    ["doctext_letter1"] = {
+        label = "Lettre de démission",
+        weight = 100,
+        stack = false,
+        close = true,
+        --description = "",
+        consume = 0,
+        client = {
+            image = "paperprint.png",
+            export = 'qbx_Ab_ReadDoc.doctext_letter1'
+        }        
+    },
+    ["doctext_letter2"] = {
+        label = "Ancienne lettre",
+        weight = 100,
+        stack = false,
+        close = true,
+        --description = "",
+        consume = 0,
+        client = {
+            image = "paperprint.png",
+            export = 'qbx_Ab_ReadDoc.doctext_letter2'
+        }        
+    },
+    ["doctext_letter3"] = {
+        label = "Ancienne lettre",
+        weight = 100,
+        stack = false,
+        close = true,
+        --description = "",
+        consume = 0,
+        client = {
+            image = "paperprint.png",
+            export = 'qbx_Ab_ReadDoc.doctext_letter3'
+        }        
+    },
+    ["doctext_letter4"] = {
+        label = "Ancienne lettre",
+        weight = 100,
+        stack = false,
+        close = true,
+        --description = "",
+        consume = 0,
+        client = {
+            image = "paperprint.png",
+            export = 'qbx_Ab_ReadDoc.doctext_letter4'
+        }        
+    },
+    ["doctext_letter5"] = {
+        label = "Ancienne lettre",
+        weight = 100,
+        stack = false,
+        close = true,
+        --description = "",
+        consume = 0,
+        client = {
+            image = "paperprint.png",
+            export = 'qbx_Ab_ReadDoc.doctext_letter5'
+        }        
+    },
+
+    -- Doc Images
+
+    --Recette
+        ["docimage_recette_boissons"] = {
+            label = "Recette",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "Une explication griffoné qui explique comment faire une boisson chaude",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_boissons'
+            }        
+        },
+        ["docimage_recette_burger"] = {
+            label = "Recette",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "La recette des hamburgers",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_burger'
+            }        
+        },
+        ["docimage_recette_frite"] = {
+            label = "Recette",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "La recette des frites",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_frite'
+            }        
+        },
+        ["docimage_recette_omelette"] = {
+            label = "Recette",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "La recette de l'omelette",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_omelette'
+            }        
+        },
+        ["docimage_recette_salade"] = {
+            label = "Recette",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "La recette de la salade de tomate",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_salade'
+            }        
+        },
+        ["docimage_recette_cafe"] = {
+            label = "Note à Philippe",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "Une note pour Philippe à propos du café",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_cafe'
+            }        
+        },
+        ["docimage_recette_grosjoint"] = {
+            label = "Recette suspecte",
+            weight = 100,
+            stack = false,
+            close = true,
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_grosjoint'
+            }        
+        },
+        ["docimage_recette_medicament"] = {
+            label = "Recette",
+            weight = 100,
+            stack = false,
+            close = true,
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_recette_medicament'
+            }        
+        },
+    --Document officiel de RDx
+        ["docimage_nds_bonbonne"] = {
+            label = "Note de service",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_nds_bonbonne'
+            }        
+        },
+        ["docimage_nds_courrier"] = {
+            label = "Note de service",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_nds_courrier'
+            }        
+        },
+        ["docimage_nds_livraison"] = {
+            label = "Note de service",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_nds_livraison'
+            }        
+        },
+        ["docimage_nds_commande"] = {
+            label = "Note de service",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_nds_commande'
+            }        
+        },
+        ["docimage_joblist"] = {
+            label = "Document listes de poste",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_joblist'
+            }        
+        },
+        --Job Doc
+            ["docimage_jobdoc_it"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Chargé.es de télégestion",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_it'
+                }        
+            },
+            ["docimage_jobdoc_cafet"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Artisant.es culinaire",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_cafet'
+                }        
+            },
+            ["docimage_jobdoc_archive"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Garant.es de consignations et dépôts",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_archive'
+                }        
+            },
+            ["docimage_jobdoc_menage"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Executant.es sanitaire",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_menage'
+                }        
+            },
+            ["docimage_jobdoc_compta"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Conservateurs budgétaire",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_compta'
+                }        
+            },
+            ["docimage_jobdoc_accueil"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Coordinateurs fonctionnel",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_accueil'
+                }        
+            },
+            ["docimage_jobdoc_communication"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Auxiliaires Transmitionnel",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_communication'
+                }        
+            },
+            ["docimage_jobdoc_infirmerie"] = {
+                label = "Fiche de poste",
+                weight = 100,
+                stack = true,
+                close = true,
+                description = "La fiche de poste des Agent.es thérapeutique",
+                consume = 0,
+                client = {
+                    image = "paperprint.png",
+                    export = 'qbx_Ab_ImagesDoc.docimage_jobdoc_infirmerie'
+                }        
+            },
+    -- Doc codé
+        ["docimage_code1"] = {
+            label = "Document cryptique",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_code1'
+            }        
+        },
+        ["docimage_code2"] = {
+            label = "Document cryptique",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_code2'
+            }        
+        },
+        ["docimage_code3"] = {
+            label = "Document cryptique",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_code3'
+            }        
+        },
+        ["docimage_code4"] = {
+            label = "Document cryptique",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_code4'
+            }        
+        },
+        ["docimage_code5"] = {
+            label = "Document cryptique",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_code5'
+            }        
+        },
+        ["docimage_code6"] = {
+            label = "Document cryptique",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_code6'
+            }        
+        },
+        ["docimage_pub"] = {
+            label = "Tract publicitaire",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pub'
+            }        
+        },
+
+    -- image
+        ["docimage_pola_01"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_01'
+            }        
+        },
+        ["docimage_pola_02"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_02'
+            }        
+        },
+        ["docimage_pola_03"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_03'
+            }        
+        },
+        ["docimage_pola_04"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_04'
+            }        
+        },
+        ["docimage_pola_05"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_05'
+            }        
+        },
+        ["docimage_pola_06"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_06'
+            }        
+        },
+        ["docimage_pola_07"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_07'
+            }        
+        },
+        ["docimage_pola_08"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_08'
+            }        
+        },
+        ["docimage_pola_09"] = {
+            label = "Polaroïd",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pola_09'
+            }        
+        },
+        ["docimage_photo_1"] = {
+            label = "Photo",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "polaroid.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_photo_1'
+            }        
+        },          
+
+    -- useless docimage
+        ["docimage_useless1"] = {
+            label = "To Do list",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless1'
+            }        
+        },
+        ["docimage_useless2"] = {
+            label = "Demande de congé",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless2'
+            }        
+        },
+        ["docimage_useless3"] = {
+            label = "Invitation",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless3'
+            }        
+        },
+        ["docimage_useless4"] = {
+            label = "note de Gerard",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless4'
+            }        
+        },
+        ["docimage_useless5"] = {
+            label = "Document d'analyse",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless5'
+            }        
+        },
+        ["docimage_useless6"] = {
+            label = "Note",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless6'
+            }        
+        },
+        ["docimage_useless7"] = {
+            label = "Note gribouillé",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless7'
+            }        
+        },
+        ["docimage_useless8"] = {
+            label = "Vieil article",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_useless8'
+            }        
+        },
+        ["docimage_pub2"] = {
+            label = "Tract publicitaire",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pub2'
+            }        
+        },
+        ["docimage_pub3"] = {
+            label = "Tract publicitaire",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pub3'
+            }        
+        },
+        ["docimage_pub4"] = {
+            label = "Tract publicitaire",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pub4'
+            }        
+        },
+        ["docimage_pub6"] = {
+            label = "Tract informatif",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pub6'
+            }        
+        },
+        ["docimage_pub7"] = {
+            label = "Tract publicitaire",
+            weight = 100,
+            stack = false,
+            close = true,
+            --description = "",
+            consume = 0,
+            client = {
+                image = "paperprint.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_pub7'
+            }        
+        },
+        ["docimage_dico"] = {
+            label = "Dictionnaire",
+            weight = 100,
+            stack = false,
+            close = true,
+            description = "Un dictionnaire des meilleurs blagues en entreprises",
+            consume = 0,
+            client = {
+                image = "docimage_dico.png",
+                export = 'qbx_Ab_ImagesDoc.docimage_dico'
+            }        
+        },

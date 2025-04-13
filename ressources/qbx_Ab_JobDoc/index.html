@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Delivery</title>
+    <style>
+        body {
+            display: none; /* Caché par défaut */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #2a1f00;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        select, input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body id="container"> <!-- Par défaut caché -->
+    <div class="container">
+        <h2>Retirer une fiche de poste</h2>
+        <label for="job">Choisir un poste :</label>
+        <select id="job">
+            <option value="" disabled selected>Choisir un poste</option>
+        </select>
+        <button onclick="submitData()">Retirer</button>
+        <button onclick="closeInterface()">Annuler</button>
+    </div>
+
+    <script>
+        // Gestion des messages reçus par l'interface
+        window.addEventListener("message", function (event) {
+            const { action, jobs } = event.data;
+
+            if (action === "open") {
+                // Afficher l'interface
+                document.body.style.display = "flex"; // Change display: none en flex
+
+                // Réinitialiser et remplir la liste d'objets
+                const jobSelect = document.getElementById("job");
+                jobSelect.innerHTML = ""; // Réinitialise le menu
+                jobs.forEach(job => {
+                    const option = document.createElement("option");
+                    option.value = job.job;
+                    option.textContent = job.label;
+                    jobSelect.appendChild(option);
+                });
+            } else if (action === "hide") {
+                // Cacher l'interface
+                document.body.style.display = "none";
+            }
+        });
+
+        // Soumission des données
+        function submitData() {
+            const jobName = document.getElementById("job").value;
+
+            if (!jobName) {
+                // Si les données sont invalides, fermer l'interface
+                document.body.style.display = "none";
+
+                // Optionnel : Vous pouvez envoyer une notification au client via fetch si nécessaire
+                fetch(`https://${GetParentResourceName()}/close`, {
+                    method: "POST"
+                });
+                return;
+            }
+
+            // Envoyer les données au script client via fetch
+            fetch(`https://${GetParentResourceName()}/submitData`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ job: jobName})
+            });
+
+            // Fermer l'interface après soumission
+            document.body.style.display = "none";
+        }
+
+        // Fermeture de l'interface avec le bouton Annuler
+        function closeInterface() {
+            // Fermer l'interface visuellement
+            document.body.style.display = "none";
+
+            // Envoyer un callback "close" au script client
+            fetch(`https://${GetParentResourceName()}/close`, {
+                method: "POST"
+            });
+        }
+
+    </script>
+</body>
+</html>

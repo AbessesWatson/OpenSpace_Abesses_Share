@@ -1,0 +1,1 @@
+important le nom de l'image doit être identique à celui du nom de l'item dans ox_inventory

@@ -1,0 +1,81 @@
+<!-- lire un DOC -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            background-color: #f5f5dc; /* Fond beige */
+            border: 3px solid #d2b48c; /* Contour sombre */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+            width: calc(27vw); /* Ratio 21 × 27 */
+            height: calc(36vw); /* Ratio 21 × 27 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Positionne le contenu en haut */
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: justify;
+            overflow: auto; /* Permet le défilement si le texte dépasse */
+        }
+
+        p {
+            color: #000; /* Texte noir */
+            font-size: 1.2rem;
+            line-height: 1.5;
+            padding-top: 20px; /* Ajoute un espacement interne avant le texte */
+            margin: 0; /* Supprime les marges extérieures pour éviter les espaces supplémentaires */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p id="textContent"></p>
+    </div>
+    <script>
+        // Gestion des messages envoyés par le script Lua
+        window.addEventListener('message', function(event) {
+            const { action, text } = event.data;
+
+            if (action === 'openText') {
+                // Remplace les sauts de ligne par des balises <br>
+                const formattedText = text.replace(/\n/g, '<br>');
+
+                // Insère le texte dans le conteneur en conservant les sauts de ligne
+                document.getElementById('textContent').innerHTML = formattedText;
+
+                // Affiche l'interface
+                document.body.style.display = 'flex';
+                document.getElementById('container').style.display = 'flex';
+            } else if (action === 'closeText') {
+                document.body.style.display = 'none';
+                document.getElementById('container').style.display = 'flex';
+            }
+        });
+
+        // Fermer l'interface en appuyant sur Échap
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                fetch(`https://${GetParentResourceName()}/closeText`, {
+                    method: 'POST'
+                });
+                document.body.style.display = 'none';
+                document.getElementById('container').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

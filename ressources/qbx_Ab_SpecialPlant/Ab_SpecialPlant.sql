@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `Ab_SpecialPlant` (
+    `citizenid` VARCHAR(50) NOT NULL PRIMARY KEY,
+    `isdreaming` TINYINT(1) NOT NULL DEFAULT 0,
+    `x` FLOAT NOT NULL,
+    `y` FLOAT NOT NULL,
+    `z` FLOAT NOT NULL
+);

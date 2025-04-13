@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir un Objet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            display: none; /* Caché par défaut */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #2a1f00;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        select, button {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+        }
+        button {
+            background: #555;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Choisir un courrier à déposer</h2>
+        <select id="item" onchange="itemSelected()">
+            <!-- Les options seront injectées ici -->
+        </select>
+        <div>
+            <button onclick="submitData()">Valider</button>
+            <button onclick="closeInterface()">Annuler</button>
+        </div>
+    </div>
+
+    <script>
+    let selectedItemName = ''; // Pour stocker l'item choisi
+    let pileKind = ''; // Pour stocker la pile
+
+    // Gestion des messages reçus par l'interface
+    window.addEventListener("message", function (event) {
+        const { action, items, pilekind } = event.data; // Récupération de pilekind
+
+        if (action === "open") {
+            pileKind = pilekind; // Stocke la pile reçue
+            document.body.style.display = "flex"; // Affiche l'interface
+
+            const itemSelect = document.getElementById("item");
+            itemSelect.innerHTML = ""; // Réinitialise la liste des items
+
+            items.forEach((item, index) => {
+                const option = document.createElement("option");
+                option.value = item.name;
+                option.textContent = item.label;
+                itemSelect.appendChild(option);
+
+                // Sélectionne par défaut le premier item
+                if (index === 0) {
+                    selectedItemName = item.name;
+                }
+            });
+        } else if (action === "close") {
+            document.body.style.display = "none"; // Ferme l'interface
+        }
+    });
+
+    // Fonction appelée lorsque l'utilisateur sélectionne un item dans la liste déroulante
+    function itemSelected() {
+        const itemSelect = document.getElementById("item");
+        selectedItemName = itemSelect.value;  // On récupère l'item sélectionné
+    }
+
+    // Soumission des données (l'item choisi)
+    function submitData() {
+    if (selectedItemName) {
+        fetch(`https://${GetParentResourceName()}/chooseItem`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                itemName: selectedItemName,
+                pileKind: pileKind // Inclure pileKind dans la soumission
+            })
+        });
+
+        closeInterface();
+    } else {
+        closeInterface();
+    }
+}
+
+    // Fermeture de l'interface avec le bouton Annuler
+    function closeInterface() {
+        document.body.style.display = "none"; // Ferme l'interface visuellement
+        fetch(`https://${GetParentResourceName()}/close`, {
+            method: "POST"
+        });
+    }
+    </script>
+</body>
+</html>

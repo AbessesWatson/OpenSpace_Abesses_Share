@@ -1,0 +1,67 @@
+<!-- lire un DOC -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Viewer</title>
+    <style>
+        body {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #imageContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 80vw;  /* L'image fait max 80% de la largeur de l'écran */
+            max-height: 80vh; /* L'image fait max 80% de la hauteur de l'écran */
+        }
+
+        /* Style de l'image pour qu'elle garde son format */
+        #itemImage {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Garde les proportions sans crop */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <img id="itemImage" src="" alt="Item">
+    </div>
+    <script>
+        // Gestion des messages envoyés par le script Lua
+        window.addEventListener('message', function(event) {
+            const { action, text } = event.data;
+
+            if (action === 'openImage') {
+
+                const itemImage = document.getElementById("itemImage");
+                itemImage.src = "images/" + event.data.item + ".png";
+                document.body.style.display = "flex";
+                document.getElementById('imageContainer').style.display = 'flex';
+                
+            } else if (action === 'closeImage') {
+                document.body.style.display = 'none';
+                
+            }
+        });
+
+        // Fermer l'interface en appuyant sur Échap
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' || event.key === 'Backspace') {
+                fetch(`https://${GetParentResourceName()}/closeImage`, {
+                    method: 'POST'
+                });
+                document.body.style.display = 'none';
+                document.getElementById('imageContainer').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

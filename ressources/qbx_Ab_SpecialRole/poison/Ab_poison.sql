@@ -1,0 +1,1 @@
+ALTER TABLE players ADD poison INT DEFAULT 0;

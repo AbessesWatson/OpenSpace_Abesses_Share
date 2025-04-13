@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS `Ab_MedicLog` (
+    `citizenid` VARCHAR(50) NOT NULL PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `last_coma_reason` TEXT NOT NULL,
+    `date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

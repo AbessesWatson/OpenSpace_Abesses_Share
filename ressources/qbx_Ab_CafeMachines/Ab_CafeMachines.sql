@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS Ab_CafeMachines (
+    id VARCHAR(50) PRIMARY KEY,
+    CafeLvl INT NOT NULL DEFAULT '10'
+);

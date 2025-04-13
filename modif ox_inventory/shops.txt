@@ -1,0 +1,35 @@
+shops à ajouter/modifier dans: ox_inventory/data/shops.lua :
+
+	VendingMachineDrinks = {
+		name = 'Machine à boisson',
+		inventory = {
+			{ name = 'cocola', price = 0 },
+			{ name = 'sprout', price = 0 },
+			{ name = 'jumbo', price = 0 },
+		},
+		model = {
+			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
+		}
+	},
+	VendingMachinesnacks = {
+		name = 'Machine à snacks',
+		inventory = {
+			{ name = 'roar', price = 0 },
+			{ name = 'bellevillewood', price = 0 },
+			{ name = 'swacks', price = 0 },
+		},
+		model = {
+			`eaz_da_snak`,
+			'eaz_da_snak_arch',
+		}
+	},	
+	VendingMachinecig = {
+		name = 'Machine à cigarettes',
+		inventory = {
+			{ name = 'os_rollpaper', price = 0 },
+			{ name = 'cig_pack', price = 0 },
+		},
+		model = {
+			`prop_vend_fags_01`,
+		}
+	},

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche individuelle d'employé</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: transparent;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #3b2a00;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000000;
+        }
+        select, button {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
+        }
+        button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sélectionnez un poste</h2>
+        <select id="jobSelect">
+            <option value="">-- Choisissez un poste --</option>
+        </select>
+        <div class="buttons-container">
+            <button id="submit">Valider</button>
+            <button id="close">Fermer</button>
+        </div>
+    </div>
+    
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.data.type === "open") {
+                document.body.style.display = 'flex';
+                document.querySelector('.form-container').style.display = 'block';
+                const jobSelect = document.getElementById('jobSelect');
+                jobSelect.innerHTML = '<option value="">-- Choisissez un métier --</option>';
+                
+                event.data.jobs.forEach(job => {
+                    let option = document.createElement('option');
+                    option.value = job.name;
+                    option.textContent = job.label;
+                    jobSelect.appendChild(option);
+                });
+            }
+        });
+
+        document.getElementById('submit').addEventListener('click', function() {
+            const selectedJob = document.getElementById('jobSelect').value;
+            if (selectedJob) {
+                fetch(`https://${GetParentResourceName()}/submitjob`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ job: selectedJob })
+                });
+                document.querySelector('.form-container').style.display = 'none';
+            }
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+            fetch(`https://${GetParentResourceName()}/closeUI`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            });
+            document.querySelector('.form-container').style.display = 'none';
+        });
+                
+    </script>
+</body>
+</html>

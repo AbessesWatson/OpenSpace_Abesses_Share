@@ -1,0 +1,38 @@
+STAND ALONE EXTERIEUR
+- 0r_cctv (Payant)
+- bob74_ipl
+- cpdev-payphone (payant et il est nécessaire de créé des zone item pour les telephone custom, contactez Eazy_V pour de l'aide)
+- DH_FreeCam
+- fivem-freecam
+- illenium-appearance
+- mana_audio
+- mth-rc
+- MugShotBase64
+- nkt-printer (version modifier par Abesses pour aller avec le system d'imprimante du job communication)
+- PolyZone
+- rcore_whiteboard (Payant)
+- Renewed-Weathersync
+- Scully_emotemenu (nous avons retirer beaucoup d'emote problématique pour par cohérence)
+- sit
+- xsound
+- pma-voice
+
+STAND ALONE PAR EAZY_V
+- eaz_da_bot
+- eaz_da_giant
+- eaz_entity_setter
+- eaz_entity_setter_arch
+- eaz_entity_setter_carpark
+- os_blackout
+
+STAND ALONE PAR VakzOs
+
+- vkz_announce
+- vkz-cin
+- vkz-eq
+- vkz-loadscreen
+
+STAND ALONE PAR PROKY
+
+- rc_coureur
+- rc_rhapsody

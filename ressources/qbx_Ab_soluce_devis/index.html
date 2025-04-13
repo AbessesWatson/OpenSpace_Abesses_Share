@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;         /* S’assure que le corps occupe 100% de la hauteur */
+            visibility: hidden; /* Masque par défaut */
+        }
+        #image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img id="Background_Soluce" src="Background_Soluce.png" alt="Background_Soluce" />
+    <script>
+        window.addEventListener('message', function(event) {
+            const data = event.data;
+
+            if (data.action === 'showImage') {
+                document.body.style.visibility = 'visible';
+            } else if (data.action === 'hideImage') {
+                document.body.style.visibility = 'hidden';
+            }
+        });
+    </script>
+</body>
+</html>

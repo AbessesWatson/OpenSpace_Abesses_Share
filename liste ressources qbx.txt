@@ -1,0 +1,11 @@
+Il est recommander d'installer proprement qbx plutôt que d'ajouter les scripts uns par uns cette liste est purement informative.
+Ce sont les scriptes indispensable, cependant il peut être nécessaire d'en installer d'autre pour éviter les conflicts qbx.
+
+- qbx_adminmenu
+- qbx_core
+- qbx_fireworks
+- qbx_garages
+- qbx_hud
+- qbx_radialmenu (version modifierp our qu'il y seulement les vêtements)
+- qbx_smallresources
+- qbx_spawn

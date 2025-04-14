@@ -289,7 +289,7 @@
                 items = 'vhs_horreur',
                 distance = 1.5,
                 onSelect = function(data)
-                    TriggerEvent('playVideoForAll', Config.video_cassette_horreur, 50)
+                    TriggerEvent('video_cassette_horreur', Config.video_cassette_horreur, 50)
                 end,
             },
             {
